@@ -1,0 +1,10 @@
+Z tego co ja umim:
+piszemy sobie coś tam piszemy,
+potem przechodzimy do folderu z projektem i robimy:
+git add *
+git commit -m "tajna wiadomość do innych"
+git push origin master
+
+
+jak rzuca błędami to robimy:
+git pull origin
