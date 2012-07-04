@@ -1,0 +1,6 @@
+\select@language {polish}
+\contentsline {section}{\numberline {1}Wst\IeC {\k e}p}{2}
+\contentsline {section}{\numberline {2}Opis interfejs\IeC {\'o}w}{2}
+\contentsline {subsection}{\numberline {2.1}Interfejs motorniczego}{2}
+\contentsline {subsection}{\numberline {2.2}Interfejs instruktora}{2}
+\contentsline {subsection}{\numberline {2.3}Sieciowy interfejs administracyjny}{2}
