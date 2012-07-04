@@ -1,45 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
-   android:orientation="vertical"
-
-   android:layout_width="fill_parent"
-
-   android:layout_height="fill_parent"
-
-   >
-
-<TextView
-
-   android:layout_width="fill_parent"
-
-   android:layout_height="wrap_content"
-
-   android:text="@string/hello"
-
-   ></TextView>
-
-<EditText
-
-    android:layout_height="wrap_content"
-
-   android:id="@+id/txtName"
-
-      android:layout_width="fill_parent"
-
-     android:text="wpisz tekst..."
-
-  ></EditText>
-
-<Button
-
-    android:layout_height="wrap_content"
-
-   android:text="Kliknij tutaj"
-
-   android:layout_width="fill_parent"
-
-     android:id="@+id/btnName"></Button>
-
-</LinearLayout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Type here:"/>
+    <EditText
+        android:id="@+id/entry"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:layout_below="@id/label"/>
+    <Button
+        android:id="@+id/dodomu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/entry"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dip"
+        android:text="Do Domu" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/dodomu"
+        android:layout_alignTop="@id/dodomu"
+        android:text="Inne" />
+</RelativeLayout>
