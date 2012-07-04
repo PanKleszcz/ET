@@ -1,0 +1,11 @@
+Dorota:
+wstep
+harmonogram
+koszt
+szablony interfejsów
+testy
+
+Kuba:
+opis - interfejsy
+zasoby
+s³ownik
