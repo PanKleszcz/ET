@@ -1,0 +1,7 @@
+\select@language {polish}
+\contentsline {section}{\numberline {1}Wst\IeC {\k e}p}{2}
+\contentsline {section}{\numberline {2}Testowanie oprogramowania}{2}
+\contentsline {subsection}{\numberline {2.1}Testy stabilno\IeC {\'s}ci}{2}
+\contentsline {subsection}{\numberline {2.2}Testy publiczne}{2}
+\contentsline {section}{\numberline {3}Badanie poprawno\IeC {\'s}ci obwod\IeC {\'o}w}{2}
+\contentsline {section}{\numberline {4}Testowanie sprz\IeC {\k e}tu z zainstalowanym oprogramowaniem}{2}
