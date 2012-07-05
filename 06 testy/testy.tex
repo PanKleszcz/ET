@@ -93,63 +93,42 @@
 
 \makeatother
 
-\author{Jakub Stępniewicz (\textbf{233217})\\Rafał Maćkowski (\textbf{233170})\\Grupa {\bf I}}
+\author{Jakub Stępniewicz (\textbf{233217})\\Dorota Suchocka (\textbf{233218})\\ RadosławWarzocha (\textbf{221136})\\Grupa {\bf XVII}}
 
-\title{Symulator tramwaju\\ \small{Też możesz być motorniczym}}
+\title{Do Domu\\ \small{Nawigator kieszonkowy}}
 
 
 \begin{document}
 \maketitle
 \tableofcontents
 \vspace{5cm}
-%	\begin{thebibliography}{9}
-%	\bibitem{US} tz, W. Hill {\it Us}, Warszawa 2009.
-%	\bibitem{MPK} \url{http://www.mpk.wroc.pl/}
-%	\bibitem{SK} \url{http://www.skoda.cz/en/products/tramcars/tramcar-19-t/}
-%	\bibitem{UE} \url{http://www.unrealengine.com/}
-%	\bibitem{GO} \url{http://www.google.pl/#sclient=psy-ab&hl=pl&source=hp&q=%22symulator+tramwaju+skoda+16t%22&pbx=1&oq=%22symulator+tramwaju+skoda+16t}
-%	\end{thebibliography}
+
 \newpage
 % 		Ok, najtrudniejsze za nami.		%
 % 
 \section{Wstęp}
 Celem przeprowadzania procedur testowych jest wykrycie możliwie największej ilości błędów 
-oprogramowania oraz wad wynikających z nieprawidłowej budowy sprzętu. Umożliwia to poprawienie 
-konstrukcji symulatora oraz zmniejsza prawdopodobieństwo wystąpienia błędów po dostarczeniu go 
-klientowi.
+oprogramowania. Umożliwia to poprawienie aplikacji oraz zmniejsza prawdopodobieństwo wystąpienia błędów po dostarczeniu jej klientowi.
 
 \section{Testowanie oprogramowania}
 \subsection{Testy stabilności}
 Testy stabilności polegają na próbie wykrycia błędów w programie, które mogłyby powodować brak 
 odpowiedzi z jego strony lub konieczność zamknięcia procesu symulacji. Proces testowania polegałby 
-na próbie wywołania wszystkich funkcji, składających się na oprogramowanie symulatora, w zależności 
+na próbie wywołania wszystkich funkcji, składających się na oprogramowanie, w zależności 
 od wartości, losowanej ze zbioru możliwych danych wejściowych dla danej funkcji. W razie wystąpienia 
 błędów podczas przeprowadzania procedury, jesteśmy w stanie dokładnie sprecyzować, która funkcja 
 powoduje nieprawidłowość oraz dla jakich argumentów. Powyższa metoda testowania stabilności nie 
 pozwoli wykryć błędów wynikających z wprowadzenia niepoprawnych danych wejściowych jako argumentów 
 funkcji.
 
+\subsection{Testowanie oprogramowania na specjalnie w tym celu zakupionym sprzęcie}
+Przeprowadzenie testów na sprzęcie dla którego dedykowana jest aplikacja pozwoli wykryć kolejne błedy w programie, głównie związane z działaniem odbiornika GPS w urządzeniach mobilnych. Proces testowania polegałby na próbie wywołania wszystkich funkcji w realnych sytuacjach użycia. 
+
+
 \subsection{Testy publiczne}
 Testy publiczne polegają na bezpłatnym udostępnieniu zmodyfikowanego pliku wykonywalnego w sieci 
-Internet. Modyfikacje pliku umożliwiałyby przeprowadzenie symulacji bez użycia specjalnego kokpitu, a jedynie
-używając klawiatury oraz 
-myszy. Dodatkowo diody i wyświetlacze z konsoli byłyby widoczne na monitorze komputera. Plik byłby 
-udostępniony jako gra komputerowa z możliwością wysyłania raportów o błędach generowanych przez 
-program lub pisanych przez użytkownika.
+Internet. Plik byłby udostępniony przez Google Play, pozwoli to na łatwą instalację, dodatkowo posiadałby możliwość wysyłania raportów o błędach generowanych przez program lub opisanych przez użytkownika.
 
-\section{Badanie poprawności obwodów}
-Badanie poprawności obwodów ma na celu wykrycie usterek związanych z niepoprawnym złożeniem lub 
-zlutowaniem elementów składających się na symulator. Każdy obwód będzie badany przy pomocy 
-mierników, aby sprawdzić przepływ prądu. Tam gdzie jest to możliwe, przeprowadzana będzie symulacja 
-polegająca na przyłożeniu napięcia do styków urządzenia i sprawdzeniu czy urządzenie reaguje w 
-sposób zgodny z oczekiwaniami.
 
-\section{Testowanie sprzętu z zainstalowanym oprogramowaniem}
-Testy wydajnościowe mają na celu znalezienie sytuacji w których program będzie generował obraz 
-zauważalnie wolniej niż miałoby to miejsce w rzeczywistości. Na potrzeby testu przyjmujemy, że 
-płynny obraz to wyświetlanie 30 klatek na sekundę. Aby umożliwić przeprowadzenie testów zostanie 
-dopisana procedura badająca ilość klatek wyświetlanych na sekundę. W przypadku spadku tej wartości 
-poniżej 30, w pliku stress\_test.txt zapisywane będą aktualne ustawienia programu oraz uzyskana 
-liczba klatek na sekundę. Testy będą przeprowadzane dla różnych wartości parametrów symulacji.
 \end{document}
 
