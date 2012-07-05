@@ -1,0 +1,4 @@
+\select@language {polish}
+\contentsline {section}{\numberline {1}Wst\IeC {\k e}p}{2}
+\contentsline {subsection}{\numberline {1.1}Schemat og\IeC {\'o}lny}{2}
+\contentsline {subsection}{\numberline {1.2}Sterownik kokpitu}{2}
