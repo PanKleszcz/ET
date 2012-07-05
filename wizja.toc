@@ -1,0 +1,26 @@
+\select@language {polish}
+\contentsline {section}{\numberline {1}Wprowadzenie}{2}
+\contentsline {subsection}{\numberline {1.1}Cel dokumentu wizji}{2}
+\contentsline {subsection}{\numberline {1.2}Og\IeC {\'o}lny opis produktu}{2}
+\contentsline {section}{\numberline {2}Opis u\IeC {\.z}ytkownika}{3}
+\contentsline {subsection}{\numberline {2.1}Dane statystyczne dot. u\IeC {\.z}ytkownik\IeC {\'o}w i rynku}{3}
+\contentsline {subsection}{\numberline {2.2}Opis u\IeC {\.z}ytkownik\IeC {\'o}w }{3}
+\contentsline {subsection}{\numberline {2.3}\IeC {\'S}rodowisko u\IeC {\.z}ytkownik\IeC {\'o}w}{3}
+\contentsline {subsection}{\numberline {2.4}Podstawowe potrzeby u\IeC {\.z}ytkownika }{3}
+\contentsline {subsection}{\numberline {2.5}Rozwi\IeC {\k a}zania alternatywne i konkurencyjne}{3}
+\contentsline {section}{\numberline {3}Og\IeC {\'o}lny opis produktu}{4}
+\contentsline {subsection}{\numberline {3.1}Schemat produktu}{4}
+\contentsline {subsection}{\numberline {3.2}Okre\IeC {\'s}lenie pozycji produktu na rynku}{4}
+\contentsline {subsection}{\numberline {3.3}Za\IeC {\l }o\IeC {\.z}enia i zale\IeC {\.z}no\IeC {\'s}ci}{4}
+\contentsline {section}{\numberline {4}Cechy produktu}{5}
+\contentsline {subsection}{\numberline {4.1}Tworzenie punktu g\IeC {\l }\IeC {\'o}wnego}{5}
+\contentsline {subsection}{\numberline {4.2}Ulubione punkty}{5}
+\contentsline {subsection}{\numberline {4.3}Sprawdzenie po\IeC {\l }\IeC {\k a}cze\IeC {\'n} z punktu A do punktu B}{5}
+\contentsline {section}{\numberline {5}Atrybuty cech}{6}
+\contentsline {subsection}{\numberline {5.1}Tworzenie punktu g\IeC {\l }\IeC {\'o}wnego}{6}
+\contentsline {subsection}{\numberline {5.2}Ulubione punkty}{6}
+\contentsline {subsection}{\numberline {5.3}Sprawdzenie po\IeC {\l }\IeC {\k a}cze\IeC {\'n} z punktu A do punktu B}{6}
+\contentsline {section}{\numberline {6}Podstawowe przypadki u\IeC {\.z}ycia}{7}
+\contentsline {section}{\numberline {7}Wymagania dokumentacyjne}{8}
+\contentsline {subsection}{\numberline {7.1}Pomoc techniczna}{8}
+\contentsline {subsection}{\numberline {7.2}Instalacja i konfiguracja}{8}
