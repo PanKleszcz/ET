@@ -1,0 +1,26 @@
+Wygl¹d:
+przy pierwszym w³¹czeniu ustawinia
+przyciski "Do Domu" "Bawimy siê dalej"
+
+Do Domu:
+znajduje lokalizacjê i po³¹cznie w promieniu
+
+Bawimy sie dalej:
+1. rozk³ad lini
+2. rozk³ad przystanku 
+3. wyszukaj po³aczenie 
+4. ulubione
+
+W menu:
+ustawienia
+aktualizuj
+zmien dom
+
+
+Do robienia:
+GPS - robi Kuba
+pobieranie aktualizacji i parsowanie XMLa - szereg klas: przystanki, linie
+magiczny algorytm w promilu
+GUI
+
+
