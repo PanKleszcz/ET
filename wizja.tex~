@@ -1,0 +1,167 @@
+\documentclass[12pt,a4paper,notitlepage]{article}
+\usepackage{polski}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[top=2cm, bottom=2cm, left=3cm, right=3cm]{geometry}
+\usepackage{url}
+
+\AtBeginDocument{% Fragment zmieniający nazwy 'Rysunek' na 'Wykres' i 'Tablica' na 'Tabela'
+        \renewcommand{\tablename}{Tabela}
+        \renewcommand{\figurename}{Wykres}
+}
+
+\makeatletter
+\newcommand{\linia}{\rule{\linewidth}{0.4mm}}
+
+\renewcommand\@seccntformat[1]{\csname the#1\endcsname.\quad}
+\renewcommand{\maketitle}{\begin{titlepage}
+		\vspace*{1cm}
+    \begin{center}\small
+    	Uniwersytet Wrocławski\\
+    	Wydział Matematyki i Informatyki\\
+    \end{center}
+    \vspace{3cm}
+    \noindent
+    \linia
+    \begin{center}
+    	\LARGE{\textsc{\@title}}
+         \end{center}
+     \linia
+    \begin{center}
+    	\Large{Dokument wizji}
+         \end{center}
+    \vspace{0.5cm}
+
+    \begin{flushright}
+
+    \begin{minipage}{5.5cm}
+
+    	\small Autorzy:
+
+    \normalsize {\@author} \par
+    
+
+    \end{minipage}
+    \vspace{5cm}
+
+     {\small Praca wykonana pod przewodnictwem:}\\
+
+     mgr Zdzisław Płoski
+
+     \end{flushright}
+
+    \vspace*{\stretch{6}}
+
+    \begin{center}
+
+    \@date\\
+    wersja \textit{1.0.0.3 rc1}
+
+    \end{center}
+
+  \end{titlepage}%
+
+}
+
+
+\makeatother
+
+\author{Jakub Stępniewicz (\textbf{233217})\\Rafał Maćkowski (\textbf{233170})}
+
+\title{Symulator tramwaju\\ \small{Też możesz być motorniczym}}
+
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+% 		Ok, najtrudniejsze za nami.		%
+% 
+\section{Wprowadzenie}
+	\subsection{Cel dokumentu wizji}
+	Celem dokumentu jest zapoznanie potencjalnego klienta z cechami produktu, jakim będzie \textit{Symulator Tramwajów}.
+	\subsection{Ogólny opis produktu}
+	W 2011 roku Miejskie Przedsiębiorstwo Komunikacyjne Sp. z o. o. we Wrocławiu wydało \textbf{180 milionów złotych} na zakup \textbf{21} sztuk
+	tramwajów typu \textit{Škoda 19T}. Posługiwanie się tak drogim sprzętem nakłada na motorniczych wielką odpowiedzialność. Projekt
+	powstanie w celu zapoznania i przeszkolenia pracowników zajmujących się obsługą wyżej wspomnianych pojazdów.
+	\subsection{Odniesienia}
+	\url{http://www.mpk.wroc.pl/}\\
+	\url{http://www.skoda.cz/en/products/tramcars/tramcar-19-t/}\\
+	\url{http://www.unrealengine.com/}\\
+	\newpage
+\section{Opis użytkownika}
+	\subsection{Dane statystyczne dot. użytkowników i rynku}
+	Obecnie na rynku znajduje się bardzo niewiele rozwiązań tego typu. W Polsce znajdują się dwa ośrodki umożliwiające symulację tramwajów, lecz jest ona ograniczona do kilku przestarzałych modeli. W szczególności w żadnym z nich nie jest dostępny tramwaj \textit{Škoda 19T}. \\
+	\subsection{Opis użytkowników }
+	Symulator skierowany jest głównie do Wrocławskiego Przedsiębiorstwa Komunikacyjnego, gdyż tylko w tym mieście znajdują się tramwaje tego typu. Nie jest jednak odrzucana możliwość zakupu rozwiązanie przez klientów indywidualnych, 
+	w szczególności szkoły kierowców i motorniczych.
+	\subsection{Podstawowe potrzeby użytkownika }
+	Potencjalny użytkownik wymaga jak najbliższego rzeczywistości odwzorowania \textbf{pojazdu trakcyjnego}. Podstawowym elementem symulatora
+	jest wiernie wymodelowany \textbf{kokpit}, oraz \textbf{przestrzeń robocza} motorniczego. Symulator umożliwi pełną kontrolę parametrów
+	pojazdu oraz warunków otoczenia przez \textbf{interfejs konfiguracyjny}.
+	\subsection{Rozwiązania alternatywne i konkurencyjne}
+	W tej chwili nie istnieją żadne rozwiązania konkurencyjne.
+	\newpage
+\section{Ogólny opis produktu}
+	\subsection{Schemat produktu}
+	Symulator będzie składać się z trzech części:\\
+	$\bullet$ kokpitu tramwaju typu \textit{Škoda 19T}\\
+	$\bullet$ komputera osobistego obsługującego symulację\\
+	$\bullet$ interfejsu konfiguracyjnego umożliwiającego kontrolę bieżących paramatrów symulacji\\
+	\subsection{Podsumowanie możliwości}
+	Produkt umożliwi kompleksowe szkolenie personelu niezbędnego do obsługi tramwaju \textit{Škoda 19T} (motorniczy). Będzie oferował możliwość 
+	symulacji w czasie rzeczywistym wszystkich najważniejszych parametrów pojazdu trakcyjnego. Będzie mógł być wykorzystywany przy trenowaniu
+	zachowania w trudnych i wymagających sytuacjach, które mogą zaistnieć podczas prowadzenia tramwaju.
+	\subsection{Założenia i zależności}
+	Projekt jest tworzony z myślą o konkretym modelu jednostki trakcyjnej. Przewidziane są tylko kosmetyczne zmiany w wypadku udoskonalenia
+	rzeczywistego tramwaju przez producenta.
+	\subsection{Koszty i ceny}
+	
+	\begin{tabular}{l|l}
+	\texttt{Element} & \texttt{Cena} \\ \hline\\
+	$\bullet$ Budowa kokpitu & $7 000,00$ zł \\
+	$\bullet$ Konstrukcja i oprogramowanie \textbf{konsoli motorniczego} & $3 000,00$ zł \\
+	$\bullet$ Zaprogramowanie interfejsu komunikacyjnego pomiędzy \\konsolą motorniczego a programem symulującym & $1 500,00$ zł \\
+	$\bullet$ Zakup jednostki centralnej (komputer osobisty)\\ odpowiedzialnej za symulację & $3 500,00$ zł \\
+	$\bullet$ Wykonanie właściwego oprogramowania symulacyjnego & $14 000,00$ zł \\
+    $\bullet$ Silnik graficzy \textit{Unreal Engine 3} & $99$\$ \\
+ \hline\\
+ Cena całkowita & $29 000,00$ zł + $99$\$
+\end{tabular}
+	\newpage
+\section{Cechy produktu}
+\subsection{W pełni odzwierciedlony kokpit tramwaju \textit{Škoda 19T}}
+Podstawowym elementem symulatora jest wymodelowane z największą dokładnością miejce pracy motorniczego. Składa się ono z licznych przełączników, dwóch ekranów ciekłokrystalicznych oraz \textbf{przepustnicy} sterującej prędkością tramwaju. Całość będzie obsługiwana
+przez osobny system wbudowany działający na mikroprocesorach typu \textit{ATmega128}.
+\subsection{Realistyczne środowikso symulacyjne}
+Sercem symulacji jest program komputerowy odzwierciedlający działanie wcześniej wspominanego tramwaju. Wysoka jakość grafiki
+zostanie zapewniona przez silnik \textit{Unreal Engine 3}. Program będzie się komunikował za pomocą specjalnego protokołu z mikrokontrolerem,
+co umożliwi szybkie przekazanie wszystkich paramatrów pojazdu do kokpitu.
+	\newpage
+\section{Podstawowe przypadki użycia}
+Podstawowym zadaniem symulatora jest umożliwienie motorniczym, oraz kandydatom na motorniczego przećwiczenie zachowań w trudnych sytuacjach drogowych. Pozwala on także przyzwyczaić kandydatów na motorniczych do nowego systemu sterowania zastosowanego w tym tramwaju. Wiernie odwzorowane otoczenie dostarczy podstawowego obrazu pracy obsługi pojazdu trakcyjnego.
+	\newpage
+\section{Wymagania dokumentacyjne}
+\subsection{Pomoc techniczna}
+Elementem symulatora będzie bezpłatny, roczny okres pełnej pomocy technicznej, dostępnej 24 godziny na dobę, 7 dni w tygodniu. Każda usterka sprzętu i oprogramowania będzie naprawiana w najwcześniejszym możliwym terminie.
+\subsection{Instalacja i konfiguracja}
+Producent sprzętu i oprogramowania zapewnia zainstalowanie sprzętu w wybranym przez klienta miejscu. Instalacja obejmuje przeszkolenie personelu niezbędnego do obsługi symulatora (instruktor).
+	\subsection{Oznaczenia i pakowanie}
+	Symulator jest dostarczany w 11 kartonowych opakowaniach zawierających odpowiednio:\\
+	\begin{tabular}{l|l}
+	\texttt{Element} & \texttt{Numer opakowania} \\ \hline\\
+	$\bullet$ Komputer osobisty odpowiedzialny\\ za symulację & KX7004 \\
+	$\bullet$ Ekrany ciekłokrystaliczne kokpitu & KX1201 \\
+	$\bullet$ Przełączniki i przepustnica kokpitu& KX1202 \\
+	$\bullet$ Fotel motorniczego & KX1203 \\
+	$\bullet$ Okablowanie kokpitu & KX1204 \\
+	$\bullet$ Mikrokontrolery odpowiedzialne za sterowanie & KX1205 \\
+	$\bullet$ Elementy plastikowe kokpitu cz. I & KX1206 \\
+	$\bullet$ Elementy plastikowe kokpitu cz. II & KX1207 \\
+	$\bullet$ Urządzenia peryferyjne stanowiska instruktora & KX4401 \\
+	$\bullet$ Oprogramowanie symulatora & KX6635 \\
+	$\bullet$ Kolorowy dywanik & KX2266
+	\end{tabular}
+
+\end{document}
+

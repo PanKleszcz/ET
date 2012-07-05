@@ -1,0 +1,240 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{polski}
+\usepackage[polish]{babel}
+\usepackage{bbm}
+\usepackage{bm}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[top=2cm, bottom=2cm, left=3cm, right=3cm]{geometry}
+\usepackage{url}
+\usepackage{graphics}
+%\usepackage{graphicx}
+\usepackage[pdftex]{graphicx}
+\usepackage{float}
+\usepackage{amsmath,amsthm}
+\usepackage{enumitem}
+\usepackage{epstopdf}
+%\usepackage{indentfirst}
+\usepackage[labelsep=period]{caption}
+\setlist{nolistsep}
+
+ 
+
+\AtBeginDocument{% Fragment zmieniający nazwy 'Rysunek' na 'Wykres' i 'Tablica' na 'Tabela'
+        \renewcommand{\tablename}{Tabela}
+        \renewcommand{\figurename}{Wykres}
+}
+
+\makeatletter
+\newcommand{\linia}{\rule{\linewidth}{0.4mm}}
+
+\let \savenumberline \numberline
+\def \numberline#1{\savenumberline{#1.}}
+
+
+\renewcommand*{\@seccntformat}[1]{%
+	  \csname the#1\endcsname
+		    .\quad
+}
+
+
+
+\floatstyle{plain}
+\newfloat{image}{h!}{lop}
+\floatname{image}{Rysunek}
+
+\renewcommand{\maketitle}{\begin{titlepage}
+		\vspace*{1cm}
+    \begin{center}\small
+    	Uniwersytet Wrocławski\\
+    	Wydział Matematyki i Informatyki\\
+    \end{center}
+    \vspace{3cm}
+    \noindent
+    \linia
+    \begin{center}
+    	\LARGE{\textsc{\@title}}
+         \end{center}
+     \linia
+    \begin{center}
+    	\Large{Założenia wstępne}
+         \end{center}
+    \vspace{0.5cm}
+
+    \begin{flushright}
+
+    \begin{minipage}{5.5cm}
+
+    	\small Autorzy:
+
+    \normalsize {\@author} \par
+    
+
+    \end{minipage}
+    \vspace{5cm}
+
+     
+
+     \end{flushright}
+
+    \vspace*{\stretch{6}}
+
+    \begin{center}
+
+    \@date\\
+
+    \end{center}
+
+  \end{titlepage}%
+
+}
+
+
+\makeatother
+
+\author{Jakub Stępniewicz (\textbf{233217})\\Dorota Suchocka (\textbf{233218})\\Radosław Warzocha (\textbf{221136})
+\\Grupa {\bf XVII}}
+
+\title{Do Domu\\ \small{Nawigator kieszonkowy}}
+
+
+\begin{document}
+\maketitle
+\tableofcontents
+\vspace{5cm}
+	\begin{thebibliography}{9}
+	%\bibitem{PE} P. Horowitz, W. Hill {\it Sztuka Elektroniki}, Warszawa 2009.
+	\bibitem{MPK} \url{http://www.mpk.wroc.pl/}
+	\bibitem{statystyki} \url{http://twojepc.pl/news27039.html}
+	\end{thebibliography}
+\newpage
+% 		Ok, najtrudniejsze za nami.		%
+% 
+\section{Wprowadzenie}
+	\subsection{Cel dokumentu wizji}
+	Celem niniejszego dokumentu jest opis wymagań stawianych aplikacji, ze względu na jej przeznaczenie, sposób użycia oraz najważniejszych założeń planu realizacji projektu. Temat implementacji nie jest tu podejmowany, zostanie on opisany w kolejnych dokumentach.
+	
+	\subsection{Ogólny opis produktu} 
+	\textit{Do Domu} - aplikacja mobilna, ułatwiająca poruszanie się komunikacją miejską bez potrzeby posiadania połączenia z Internetem. \\ 
+
+Podstawowym jej zadaniem będzie możliwość sprawdzenia najdogodniejszych połączeń tramwajów i autobusów należących do Miejskiego Przedsiębiorstwa Komunikacyjnego Sp. z o. o. we Wrocławiu. Dodatkowym usprawnieniem będzie możliwość wprowadzania ulubionych punktów w mieście, ma to przyspieszyć wyszukiwanie połączenia. W planach jest wprowadzenie nawigacji ułatwiającej zlokalizowanie kolejnych przystanków. \\ 
+
+Każdy użytkownik będzie miał możliwość ujawnienia swojego położenia innym korzystającym z aplikacji.
+	\newpage
+	
+\section{Opis użytkownika}
+
+	\subsection{Dane statystyczne dot. użytkowników i rynku}
+	Obecnie na rynku znajduje się bardzo niewiele rozwiązań tego typu, głównie są to rozwiązania wymagające połączenia z Internetem. \\
+Zgodnie z szacowaniami z czerwca 2012 roku liczba użytkowników Androida wynosi około 380 milionów. Andy Rubin z firmy Google, główny pomysłodawca systemu operacyjnego Android, podał kilka statystyk dotyczących swojego dziecka. Według niego liczba dziennych aktywacji systemu przekroczyła już poziom 900 tysięcy \cite{statystyki}.	
+	
+	\subsection{Opis użytkowników }
+	Aplikacja skierowana jest głównie do użytkowników połączeń Wrocławskiego Przedsiębiorstwa Komunikacyjnego \cite{MPK}. Nie jest jednak odrzucana możliwość poszerzenia bazy przez rozkłady innych przewoźników.
+
+	\subsection{Środowisko użytkowników}
+Potencjalni użytkownicy są w tej chwili zmuszeni korzystać z rozkładów znajdujących się na przystankach, co może być dla nich męczące i niewygodne, ponieważ znajdują się tam tylko rozkłady wybranych lini. \textit{Do Domu} ma na celu ułatwić im codzienne czynności związane z użytkowaniem sieci połączeń MPK.
+	
+	\subsection{Podstawowe potrzeby użytkownika }
+
+Użytkownicy urządzeń mobilnych poszukują różnych rozwiązań ułatwiających im ich codzienne czynności, również te związane z poruszaniem się po mieście. Aplikacja będzie umożliwiała sprawne wyszukanie najlepszego połączenia, a także pokieruje podczas przesiadek.
+	
+	\subsection{Rozwiązania alternatywne i konkurencyjne}
+	W tej chwili nie istnieją żadne rozwiązania konkurencyjne łączące wszystkie cechy, które chcemy osiągnąć w \textit{Do Domu}.
+	\newpage
+
+    \section{Ogólny opis produktu}
+
+Z punktu widzenia użytkownika aplikacja ma być jego codziennym pomocnikiem w podróżowaniu po mieście. 
+
+	\subsection{Schemat produktu}
+	Główne elementy aplikacji: \\
+	$\bullet$ połączenie GPS, \\
+	$\bullet$ baza danych MPK, \\
+	$\bullet$ algorytm wyszukiwania optymalnych połączeń, \\
+	$\bullet$ intuicyjny graficzny interfejs użytkownika.	
+ 
+	\subsection{Określenie pozycji produktu na rynku}
+	
+Aplikacja jest przeznaczona dla osób odczuwających potrzebę wygodniejszego planowania wyjazdów oraz chcących mieć możliwość sprawdzenia połączeń MPK w każdej sytuacji. \\ 
+
+Produkt na pewno znajdzie swoje miejsce na rynku, ponieważ wyraźnie brakuje aplikacji, która umożliwia sprawdzenie offline różnych wariantów podróży. Do tego wielkim udogodnieniem jest możliwość dodawania głównego celu trasy oraz innych ulubionych punków, do których użytkownik podróżuje tj. miejsce pracy, uczelnia.
+
+	\subsection{Założenia i zależności}	
+	
+Zakładamy że użytkownik aplikacji nie dysponuje dużą wiedzą informatyczną, dlatego też interfejs \textit{Do Domu} powinien być intuicyjny i łatwy w obsłudze, aby można było w łatwy sposób uzyskać dostęp do wszystkich funkcjonalności systemu.
+
+\newpage
+
+\section{Cechy produktu}
+
+	\subsection{Tworzenie punktu głównego}
+	Podstawowym elementem aplikacji jest możliwość ustawienia głównego punktu, miejsca, z którego najczęściej gdzieś jedziemy lub do którego wracamy. Przyspieszy to znajdowanie połączeń, np. w celu znalezienia optymalnej trasy powrotnej do domu wystarczy nacisnąć jeden przycisk. 
+
+	\subsection{Ulubione punkty}
+	System umożliwi również dodanie listy ulubionych punktów, czyli mejsc, które chcemy mieć zapamiętane przez aplikację. Przykładowo mogą to być: miejsce pracy, uczelnia, dom przyjaciela.  
+
+	\subsection{Sprawdzenie połączeń z punktu A do punktu B}
+	Dodatkową możliowością oferowaną przez aplikację będzie sprawdzenia offline wszystkich połączeń na wybranej trasie. Dzięki czemu użytkownik bez dostępu do Internetu może zaplanować trasę podruży po mieście oraz zmieniać ją na bierząco w zależności od potrzeb.
+
+	\newpage
+
+\section{Atrybuty cech}
+	
+Każda cecha posiada 5 atrybutów, poniżej podajemy ich opisy:
+\begin{itemize}
+    \item Status - Ustalony po negocjacjach i przeglądzie dokonanym przez zespół programistów. Informacje dotyczące statusu umożliwiają śledzenie postępu podczas definiowania linii bazowej przedsięwzięcia.
+
+    \item Priorytet - priorytet wprowadzenia danej cechy do projektu.
+
+    \item Ryzyko - Ustalane przez zespół programistów, na podstawie prawdopodobieństwa, że w przedsięwzięciu wystąpią niepożądane zdarzenia typu przekroczenie kosztów, opóźnienie planu lub anulowanie.
+
+    \item Stabilność - Ustalana przez analityka i zespół programistów, na podstawie prawdopodobieństwa, że zmieni się specyfikacja danej cechy.
+
+    \item Wersja docelowa - Rejestrowana jest planowana wersja produktu, w której cecha pojawi się po raz pierwszy.
+\end{itemize}
+
+
+	\subsection{Tworzenie punktu głównego}
+\begin{itemize}
+    \item Status: zatwierdzony
+    \item Priorytet: konieczne
+    \item Ryzyko: niskie
+    \item Stabilność: wysoka
+    \item Wersja docelowa: prototyp
+\end{itemize}
+
+	\subsection{Ulubione punkty}
+\begin{itemize}
+    \item Status: zatwierdzony
+    \item Priorytet: średni
+    \item Ryzyko: niskie
+    \item Stabilność: wysoka
+    \item Wersja docelowa: beta
+\end{itemize}
+
+	\subsection{Sprawdzenie połączeń z punktu A do punktu B}
+\begin{itemize}
+    \item Status: zatwierdzony
+    \item Priorytet: konieczne
+    \item Ryzyko: średnie
+    \item Stabilność: wysoka
+    \item Wersja docelowa: prototyp
+\end{itemize}
+
+\newpage
+	
+\section{Podstawowe przypadki użycia}
+Podstawowym zadaniem aplikacji jest umożliwienie użytkownikom MPK odnajdywania offline dogodnych połączeń. Pozwala ona również na dodanie ważnych dla klienta punktów w mieście w celu ułatwienia i przyspieszenia wyszukiwania. 
+	\newpage
+	
+\section{Wymagania dokumentacyjne}
+\subsection{Pomoc techniczna}
+Elementem aplikacji będzie bezpłatna pomoc techniczna. Każdy błąd zgłoszony przez użytkowników zostanie naprawiony w najwczeżliwym terminie.
+
+\subsection{Instalacja i konfiguracja}
+Producent oprogramowania zapewnia wygodną instalację aplikacji poprzez Google Play. 
+
+
+
+\end{document}
+
