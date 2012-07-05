@@ -1,0 +1,175 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{polski}
+\usepackage[polish]{babel}
+\usepackage{bbm}
+\usepackage{bm}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[top=2cm, bottom=2cm, left=3cm, right=3cm]{geometry}
+\usepackage{url}
+\usepackage{graphics}
+%\usepackage{graphicx}
+\usepackage[pdftex]{graphicx}
+\usepackage{float}
+\usepackage{amsmath,amsthm}
+\usepackage{enumitem}
+\usepackage{epstopdf}
+%\usepackage{indentfirst}
+\usepackage[labelsep=period]{caption}
+\setlist{nolistsep} 
+
+\AtBeginDocument{% Fragment zmieniający nazwy 'Rysunek' na 'Wykres' i 'Tablica' na 'Tabela'
+        \renewcommand{\tablename}{Tabela}
+        \renewcommand{\figurename}{Wykres}
+}
+
+\makeatletter
+\newcommand{\linia}{\rule{\linewidth}{0.4mm}}
+
+
+\floatstyle{plain}
+\newfloat{image}{h!}{lop}
+\floatname{image}{Rysunek}
+
+
+
+\let \savenumberline \numberline
+\def \numberline#1{\savenumberline{#1.}}
+
+
+\renewcommand*{\@seccntformat}[1]{%
+	  \csname the#1\endcsname
+		    .\quad
+}
+
+
+\renewcommand{\maketitle}{\begin{titlepage}
+		\vspace*{1cm}
+    \begin{center}\small
+    	Uniwersytet Wrocławski\\
+    	Wydział Matematyki i Informatyki\\
+    \end{center}
+    \vspace{3cm}
+    \noindent
+    \linia
+    \begin{center}
+    	\LARGE{\textsc{\@title}}
+         \end{center}
+     \linia
+    \begin{center}
+    	\Large{Słownik pojęć}
+         \end{center}
+    \vspace{0.5cm}
+
+    \begin{flushright}
+
+    \begin{minipage}{5.5cm}
+
+    	\small Autorzy:
+
+    \normalsize {\@author} \par
+    
+
+    \end{minipage}
+    \vspace{5cm}
+
+     
+
+     \end{flushright}
+
+    \vspace*{\stretch{6}}
+
+    \begin{center}
+
+    \@date\\
+
+    \end{center}
+
+  \end{titlepage}%
+
+}
+
+
+\makeatother
+
+\author{Jakub Stępniewicz (\textbf{233217})\\Rafał Maćkowski (\textbf{233170})\\Grupa {\bf I}}
+
+\title{Symulator tramwaju\\ \small{Też możesz być motorniczym}}
+
+
+\begin{document}
+\maketitle
+\tableofcontents
+\vspace{5cm}
+%	\begin{thebibliography}{9}
+%	\bibitem{US} tz, W. Hill {\it Us}, Warszawa 2009.
+%	\bibitem{MPK} \url{http://www.mpk.wroc.pl/}
+%	\bibitem{SK} \url{http://www.skoda.cz/en/products/tramcars/tramcar-19-t/}
+%	\bibitem{UE} \url{http://www.unrealengine.com/}
+%	\bibitem{GO} \url{http://www.google.pl/#sclient=psy-ab&hl=pl&source=hp&q=%22symulator+tramwaju+skoda+16t%22&pbx=1&oq=%22symulator+tramwaju+skoda+16t}
+%	\end{thebibliography}
+\newpage
+% 		Ok, najtrudniejsze za nami.		%
+% 
+\section{Wstęp}
+Dokument zawiera objaśnienia trudniejszych pojęć użytych w dokumentacji.
+
+\section{Słownik}
+
+{\bf czuwak aktywny} --– urządzenie sprawdzające obecność oraz czujność {\it motorniczego}. W
+przypadku tramwaju {\it Škoda 16T} ma on postać dwóch przycisków wmontowanych w podłogę. Obydwa
+muszą być wciśnięte jednocześnie, aby umożliwić ruch {\it jednostki trakcyjnej}.\\\\
+{\bf hamulec bębnowy} --– hamulec oparty na zasadzie tarcia, umożliwia postój tramwaju po jego
+zatrzymaniu się, kiedy to nie jest już możliwe używanie {\it hamulca elektrodynamicznego}. Jest
+także wykorzystywany podczas hamowania awaryjnego.\\\\
+{\bf hamulec elektrodynamiczny} --– hamulec wykorzystujący zasadę indukcji elektromagnetycznej.
+Hamowanie elektrodynamiczne polega na przełączeniu {\it silników trakcyjnych} w tryb generatora
+prądu elektrycznego. Opór przez nie powodowany wykorzystywany jest następnie do zatrzymania pojazdu.
+Ten sposób hamowania nie działa jednak przy niskich prędkościach, kiedy to konieczne jest
+zastosowanie {\it hamulca bębnowego}. Używanie hamulca elektrodynamicznego pozwala na odzyskanie
+większości energii hamowania.\\\\
+{\bf interfejs komunikacyjny} --– specjalne oprogramowanie pozwalające na komunikowanie się pomiędzy
+modułami symulatora, a także umożliwające na komunikację człowiek-komputer.\\\\
+{\bf jednostka trakcyjna} --– autonomiczny pojazd szynowy wyposażony we własne źródło napędu (silnik).
+Tu: tramwaj.\\\\
+{\bf kokpit} --– element tramwaju pozwalający na jego sterowanie. Składa się z licznych przełączników,
+wyświetlaczy oraz nastawników umożliwiających bieżącą kontrolę stanu i parametrów {\it jednostki
+trakcyjnej}.\\\\
+{\bf laminat poliestrowo-szklany} --– wytrzymałe, łatwe do kształtowania tworzywo sztuczne. Składa się z licznych
+warstw mat wykonanych z włókna szklanego połączonych żywicą epoksydową i pokrytych {\it
+żelkotem}.\\\\
+{\bf motorniczy} --– osoba kierująca tramwajem, odpowiedzialna za komfort, czas i bezpieczeństwo
+podróży.\\\\
+{\bf pantograf} --– element tramwaju pozwalający na pobieranie napięcia elektrycznego z {\it sieci 
+trakcyjnej}.\\\\
+{\bf pojazd trakcyjny} --– patrz: {\it jednostka trakcyjna}.\\\\
+{\bf programacja drzwi} --– sposób kontroli drzwi polegający na selektywnym wyborze otwieranych drzwi
+przez pasażerów. W momencie włączenia programacji otworzą się tylko te drzwi, przy
+których pasażerowie wcisnęli odpowiedni przycisk (zlokalizowany zwykle w bezpośrednim sąsiedztwie
+	drzwi).\\\\
+{\bf przepustnica} --– element kokpitu, dźwignia pozwalająca na sterowanie prędkością {\it jednostki
+trakcyjnej}. W przypadku tramwaju {\it Škoda 16T} w jednej dźwigni zintegrowana jest zarówno
+kontrola {\it silników trakcyjnych} jak i hamulców {\it bębnowych} oraz {\it
+elektrodynamicznych}.\\\\
+{\bf przerywnik trakcyjny} --– element {\it sieci trakcyjnej} pozwalający na łącznie dwóch różnych
+sektorów zasilających. Składa się z kawałka izolatora umieszczonego bezpośrednio na łączeniu
+sektorów. Bardzo ważne jest, aby w momencie przejazdu przez przerywnik nie pobierać napięcia z
+sieci, gdyż może to spowodować powstanie łuku elektrycznego, którego wysoka temperatura przyspawa
+pantograw do sieci trakcyjnej powodując tym samym jej zerwanie.\\\\
+{\bf radiotelefon} --– urządzenie komunikacyjne wykorzystujące fale radiowe jako medium komunikacji.\\\\
+{\bf sieć trakcyjna} --– ogólne określenie na sieć kabli, którymi doprowadzany jest prąd do jednostek
+trakcyjnych. W przypadku tramwajów Wrocławskich napięcie sieci trakcyjnej wynosi $800V$.\\\\
+{\bf silnik trakcyjny} --– źródło napędu {\it jednostki trakcyjnej}. Elektryczny silnik, który
+zamienia energie elektryczną pobraną z {\it sieci trakcyjnej} na ruch postępowy tramwaju.\\\\
+{\bf symulator} --– (tu: symulator tramwaju) oprogramowanie imitujące rzeczywistość, pozwalające na 
+wykorzystanie systemu komputerowego w celu jak najwierniejszego odzwierciedlenia warunków miejsca
+pracy {\it motorniczego}, pozwalające na wykonywanie wszystkich (również niebezpiecznych) manewrów 
+{\it jednostki trakcyjnej}\\\\
+{\bf układ trakcyjny} --– zespół {\it jednostek trakcyjnych}.\\\\
+{\bf żelkot} --– zewnętrzna warstwa {\it laminatu poliestrowo-szklanego}, nadająca mu
+estetyczny wygląd, kolor, trwałość i odporność na działanie czynników
+atmosferycznych (woda, promieniowanie UV).
+
+
+\end{document}
+

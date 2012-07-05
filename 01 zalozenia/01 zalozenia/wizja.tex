@@ -92,7 +92,7 @@
 
 \makeatother
 
-\author{Jakub Stępniewicz (\textbf{233217})\\Dorota Suchocka (\textbf{233218})\\Radosław Warzocha (\textbf{221136})
+\author{Jakub Stępniewicz (\textbf{233217})\\Dorota Suchocka (\textbf{233218})\\Radosław Warzocha (\textbf{123123})
 \\Grupa {\bf XVII}}
 
 \title{Do Domu\\ \small{Nawigator kieszonkowy}}
@@ -106,6 +106,8 @@
 	%\bibitem{PE} P. Horowitz, W. Hill {\it Sztuka Elektroniki}, Warszawa 2009.
 	\bibitem{MPK} \url{http://www.mpk.wroc.pl/}
 	\bibitem{statystyki} \url{http://twojepc.pl/news27039.html}
+	\bibitem{UE} \url{http://www.unrealengine.com/}
+	\bibitem{GO} \url{http://www.google.pl/#sclient=psy-ab&hl=pl&source=hp&q=%22symulator+tramwaju+skoda+16t%22&pbx=1&oq=%22symulator+tramwaju+skoda+16t}
 	\end{thebibliography}
 \newpage
 % 		Ok, najtrudniejsze za nami.		%
@@ -167,74 +169,95 @@ Zakładamy że użytkownik aplikacji nie dysponuje dużą wiedzą informatyczną
 
 \section{Cechy produktu}
 
-	\subsection{Tworzenie punktu głównego}
-	Podstawowym elementem aplikacji jest możliwość ustawienia głównego punktu, miejsca, z którego najczęściej gdzieś jedziemy lub do którego wracamy. Przyspieszy to znajdowanie połączeń, np. w celu znalezienia optymalnej trasy powrotnej do domu wystarczy nacisnąć jeden przycisk. 
+	\subsection{Kontrola długów osobistych}
 
-	\subsection{Ulubione punkty}
-	System umożliwi również dodanie listy ulubionych punktów, czyli mejsc, które chcemy mieć zapamiętane przez aplikację. Przykładowo mogą to być: miejsce pracy, uczelnia, dom przyjaciela.  
+System umożliwia sprawdzenie zadłużenia w ramach jednego użytkownika i w zależności od wysokości długu sugeruje oszczędność.
 
-	\subsection{Sprawdzenie połączeń z punktu A do punktu B}
-	Dodatkową możliowością oferowaną przez aplikację będzie sprawdzenia offline wszystkich połączeń na wybranej trasie. Dzięki czemu użytkownik bez dostępu do Internetu może zaplanować trasę podruży po mieście oraz zmieniać ją na bierząco w zależności od potrzeb.
+	\subsection{Możliwość tworzenia grup w ramach których widać wzajemne długi}
 
-	\newpage
+Do grupy mają dostęp wszyscy użytkownicy do niej należący. Każdy z nich może przeglądać historię zmian dokonanych przez innych członków grupy.
 
-\section{Atrybuty cech}
-	
-Każda cecha posiada 5 atrybutów, poniżej podajemy ich opisy:
-\begin{itemize}
-    \item Status - Ustalony po negocjacjach i przeglądzie dokonanym przez zespół programistów. Informacje dotyczące statusu umożliwiają śledzenie postępu podczas definiowania linii bazowej przedsięwzięcia.
+	\subsection{Możliwość sprawdzenia cudzego balansu}
 
-    \item Priorytet - priorytet wprowadzenia danej cechy do projektu.
+W ramach członków grupy istnieje możliwość sprawdzenia cudzego zadłużenia w celu generowania statystyk, co pomoże w określeniu wiarygodności dłużnika.
 
-    \item Ryzyko - Ustalane przez zespół programistów, na podstawie prawdopodobieństwa, że w przedsięwzięciu wystąpią niepożądane zdarzenia typu przekroczenie kosztów, opóźnienie planu lub anulowanie.
+	\subsection{Plan spłat}
 
-    \item Stabilność - Ustalana przez analityka i zespół programistów, na podstawie prawdopodobieństwa, że zmieni się specyfikacja danej cechy.
+System umożliwia stworzenie kalendarza spłat i zwrotów. Dzięki czemu wspomaga podjęcie decyzji o oszczędzaniu lub próbie rozłożenia spłat na dłużysz okres.
 
-    \item Wersja docelowa - Rejestrowana jest planowana wersja produktu, w której cecha pojawi się po raz pierwszy.
-\end{itemize}
+	\subsection{Integracja z portalem społecznościowym}
 
+Moduł “wydarzenia” pozwala na sprawdzenie salda w ramach wydarzeń ogłaszanych na portalu społecznościowym.
 
-	\subsection{Tworzenie punktu głównego}
-\begin{itemize}
-    \item Status: zatwierdzony
-    \item Priorytet: konieczne
-    \item Ryzyko: niskie
-    \item Stabilność: wysoka
-    \item Wersja docelowa: prototyp
-\end{itemize}
+	\subsection{Wspólne zakupy}
 
-	\subsection{Ulubione punkty}
-\begin{itemize}
-    \item Status: zatwierdzony
-    \item Priorytet: średni
-    \item Ryzyko: niskie
-    \item Stabilność: wysoka
-    \item Wersja docelowa: beta
-\end{itemize}
+Moduł umożliwiający dodanie jednego wpisu, w którym będzie zawarta kwota, osoba płacąca oraz dane uczestników wspólnych zakupów.
 
-	\subsection{Sprawdzenie połączeń z punktu A do punktu B}
-\begin{itemize}
-    \item Status: zatwierdzony
-    \item Priorytet: konieczne
-    \item Ryzyko: średnie
-    \item Stabilność: wysoka
-    \item Wersja docelowa: prototyp
-\end{itemize}
+	\subsection{Redukcja długów}
+
+System umożliwia redukowanie długów zamkniętych w cykle i w zależności od preferencji użytkowników istnieje opcja skrócenia ścieżki zadłużenia pomiędzy członkami grupy.
+
+	\subsection{Wersja mobilna}
+
+Aplikacja, którą można zainstalować na własnym telefonie w celu bieżącej aktualizacji zadłużenia.
 
 \newpage
+
+\section{Cechy produktu}
+\subsection{W pełni odzwierciedlony kokpit tramwaju \textit{Škoda 19T}}
+Podstawowym elementem symulatora jest wymodelowane z największą dokładnością miejce pracy motorniczego. Składa się ono z licznych przełączników, dwóch ekranów ciekłokrystalicznych oraz \textbf{przepustnicy} sterującej prędkością tramwaju. Całość będzie obsługiwana
+przez osobny system wbudowany działający na mikroprocesorach typu \textit{ATmega128}.
+
+Poglądowy wygląd kokpitu przedstawiony został na rysunku \ref{cock}.
+
+\begin{image}
+	\begin{center}
+		\includegraphics[bb=0 0 700px 396px]{img/cockBW.jpg}
+		\caption{Kokpit tramwaju {\it Škoda 19T}}
+			\label{cock}
+	\end{center}
+\end{image}
+
+\subsection{Realistyczne środowisko symulacyjne}
+Sercem symulacji jest program komputerowy odzwierciedlający działanie wcześniej wspominanego tramwaju. Wysoka jakość grafiki
+zostanie zapewniona przez silnik \textit{Unreal Engine 3}\cite{UE}. Program będzie się komunikował za pomocą specjalnego protokołu z mikrokontrolerem,
+co umożliwi szybkie przekazanie wszystkich paramatrów pojazdu do kokpitu.
+	\newpage
 	
 \section{Podstawowe przypadki użycia}
-Podstawowym zadaniem aplikacji jest umożliwienie użytkownikom MPK odnajdywania offline dogodnych połączeń. Pozwala ona również na dodanie ważnych dla klienta punktów w mieście w celu ułatwienia i przyspieszenia wyszukiwania. 
+Podstawowym zadaniem symulatora jest umożliwienie motorniczym, oraz kandydatom na motorniczego przećwiczenie zachowań w trudnych sytuacjach drogowych. Pozwala on także przyzwyczaić kandydatów na motorniczych do nowego systemu sterowania zastosowanego w tym tramwaju. Wiernie odwzorowane otoczenie dostarczy podstawowego obrazu pracy obsługi pojazdu trakcyjnego.
 	\newpage
 	
 \section{Wymagania dokumentacyjne}
 \subsection{Pomoc techniczna}
-Elementem aplikacji będzie bezpłatna pomoc techniczna. Każdy błąd zgłoszony przez użytkowników zostanie naprawiony w najwczeżliwym terminie.
+Elementem symulatora będzie bezpłatny, roczny okres pełnej pomocy technicznej, dostępnej 24 godziny na dobę, 7 dni w tygodniu. Każda usterka sprzętu i oprogramowania będzie naprawiana w najwcześniejszym możliwym terminie.
 
 \subsection{Instalacja i konfiguracja}
-Producent oprogramowania zapewnia wygodną instalację aplikacji poprzez Google Play. 
+Producent sprzętu i oprogramowania zapewnia zainstalowanie sprzętu w wybranym przez klienta miejscu. Instalacja obejmuje przeszkolenie personelu niezbędnego do obsługi symulatora (instruktor).
 
+\subsection{Oznaczenia i pakowanie}
+Symulator jest dostarczany w 11 kartonowych opakowaniach. Zawartość poszczególnych opakowań została przedstawiona w tabeli \ref{elem} na stronie \pageref{elem}.
 
+\begin{table}[h]
+\caption{Pakowanie elementów}
+	\begin{center}
+\begin{tabular}{l|l}
+\texttt{Element} & \texttt{Numer opakowania} \\ \hline
+Komputer osobisty odpowiedzialny za symulację & KX7004 \\
+Ekrany ciekłokrystaliczne kokpitu & KX1201 \\
+Przełączniki i przepustnica kokpitu& KX1202 \\
+Fotel motorniczego & KX1203 \\
+Okablowanie kokpitu & KX1204 \\
+Mikrokontrolery odpowiedzialne za sterowanie & KX1205 \\
+Elementy plastikowe kokpitu cz. I & KX1206 \\
+Elementy plastikowe kokpitu cz. II & KX1207 \\
+Urządzenia peryferyjne stanowiska instruktora & KX4401 \\
+Oprogramowanie symulatora & KX6635 \\
+Kolorowy dywanik & KX2266
+\end{tabular}
+\label{elem}
+\end{center}
+\end{table}
 
 \end{document}
 

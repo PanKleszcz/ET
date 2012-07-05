@@ -1,0 +1,154 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{polski}
+\usepackage[polish]{babel}
+\usepackage{bbm}
+\usepackage{bm}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[top=2cm, bottom=2cm, left=3cm, right=3cm]{geometry}
+\usepackage{url}
+\usepackage{graphics}
+%\usepackage{graphicx}
+\usepackage[pdftex]{graphicx}
+\usepackage{float}
+\usepackage{amsmath,amsthm}
+\usepackage{enumitem}
+\usepackage{epstopdf}
+%\usepackage{indentfirst}
+\usepackage[labelsep=period]{caption}
+
+
+\setlist{nolistsep}
+
+
+\AtBeginDocument{% Fragment zmieniający nazwy 'Rysunek' na 'Wykres' i 'Tablica' na 'Tabela'
+        \renewcommand{\tablename}{Tabela}
+        \renewcommand{\figurename}{Wykres}
+}
+
+\makeatletter
+\newcommand{\linia}{\rule{\linewidth}{0.4mm}}
+
+
+\floatstyle{plain}
+\newfloat{image}{h!}{lop}
+\floatname{image}{Rysunek}
+
+
+
+\let \savenumberline \numberline
+\def \numberline#1{\savenumberline{#1.}}
+
+
+\renewcommand*{\@seccntformat}[1]{%
+	  \csname the#1\endcsname
+		    .\quad
+}
+
+
+\renewcommand{\maketitle}{\begin{titlepage}
+		\vspace*{1cm}
+    \begin{center}\small
+    	Uniwersytet Wrocławski\\
+    	Wydział Matematyki i Informatyki\\
+    \end{center}
+    \vspace{3cm}
+    \noindent
+    \linia
+    \begin{center}
+    	\LARGE{\textsc{\@title}}
+         \end{center}
+     \linia
+    \begin{center}
+    	\Large{Plan wykonania prac}
+         \end{center}
+    \vspace{0.5cm}
+
+    \begin{flushright}
+
+    \begin{minipage}{5.5cm}
+
+    	\small Autorzy:
+
+    \normalsize {\@author} \par
+    
+
+    \end{minipage}
+    \vspace{5cm}
+
+     
+
+     \end{flushright}
+
+    \vspace*{\stretch{6}}
+
+    \begin{center}
+
+    \@date\\
+
+    \end{center}
+
+  \end{titlepage}%
+
+}
+
+
+\makeatother
+
+\author{Jakub Stępniewicz (\textbf{233217})\\Rafał Maćkowski (\textbf{233170})\\Grupa {\bf I}}
+
+\title{Symulator tramwaju\\ \small{Też możesz być motorniczym}}
+
+
+\begin{document}
+\maketitle
+\tableofcontents
+\vspace{5cm}
+%	\begin{thebibliography}{9}
+%	\bibitem{US} tz, W. Hill {\it Us}, Warszawa 2009.
+%	\bibitem{MPK} \url{http://www.mpk.wroc.pl/}
+%	\bibitem{SK} \url{http://www.skoda.cz/en/products/tramcars/tramcar-19-t/}
+%	\bibitem{UE} \url{http://www.unrealengine.com/}
+%	\bibitem{GO} \url{http://www.google.pl/#sclient=psy-ab&hl=pl&source=hp&q=%22symulator+tramwaju+skoda+16t%22&pbx=1&oq=%22symulator+tramwaju+skoda+16t}
+%	\end{thebibliography}
+\newpage
+% 		Ok, najtrudniejsze za nami.		%
+% 
+
+\section{Wstęp}
+Niniejszy dokument zawiera zarys harmonogramu wykonywania poszczególnych elementów dokumentacji, jak~i właściwego symulatora. \\ {\bf
+	Uwaga:}\\
+	Terminy przewidziane w dokumencie są umowne~i nie mogą być traktowane jako informacja handlowa 
+	(wg {\it Ustawy o świadczeniu usług drogą elektroniczną, art. 10.1}).
+
+\section{Harmonogram}
+Planowane terminy realizacji poszczególnych zadań zostały przedstawione w tabeli~\ref{har}.
+
+\begin{table}[h]
+\caption{Harmonogram wykonywania zadań}
+	\begin{center}
+\begin{tabular}{l|l}
+\texttt{Element} & \texttt{Termin wykonania} \\ \hline
+{\bf Dokumentacja}\\
+		Założenia wstępne & 1 grudnia 2011 \\
+		Plan wykonania prac & 22 grudnia 2011 \\
+		Opis interfejsów & 22 grudnia 2011 \\
+		Narzędzia i sposoby realizacji & 10 stycznia 2012 \\
+		Wykaz testów	&	12 stycznia 2012 \\
+		Schemat modułów	&	17 stycznia 2012 \\
+		Słownik pojęć & 18 stycznia 2012 \\ \hline
+{\bf Symulator}\\ 
+		Budowa kokpitu & 15 sierpnia 2012 \\
+		Okablowanie urządzeń & 11 września 2012 \\
+		Testowanie interfejsów & 1 listopada 2012 \\
+		Implementacja symulatora & 11 listopada 2012 \\
+		Testowanie symulatora & 6 grudnia 2012 \\
+		Oddanie gotowego rozwiązania & 24-25 grudnia 2012 \\
+\end{tabular}
+\label{har}
+\end{center}
+\end{table}
+
+
+\end{document}
+

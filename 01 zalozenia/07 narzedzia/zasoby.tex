@@ -1,0 +1,206 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{polski}
+\usepackage[polish]{babel}
+\usepackage{bbm}
+\usepackage{bm}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[top=2cm, bottom=2cm, left=3cm, right=3cm]{geometry}
+\usepackage{url}
+\usepackage{graphics}
+%\usepackage{graphicx}
+\usepackage[pdftex]{graphicx}
+\usepackage{float}
+\usepackage{amsmath,amsthm}
+\usepackage{enumitem}
+\usepackage{epstopdf}
+%\usepackage{indentfirst}
+\usepackage[labelsep=period]{caption}
+\setlist{nolistsep}
+
+
+\AtBeginDocument{% Fragment zmieniający nazwy 'Rysunek' na 'Wykres' i 'Tablica' na 'Tabela'
+        \renewcommand{\tablename}{Tabela}
+        \renewcommand{\figurename}{Wykres}
+}
+
+\makeatletter
+\newcommand{\linia}{\rule{\linewidth}{0.4mm}}
+
+
+\floatstyle{plain}
+\newfloat{image}{h!}{lop}
+\floatname{image}{Rysunek}
+
+
+
+\let \savenumberline \numberline
+\def \numberline#1{\savenumberline{#1.}}
+
+
+\renewcommand*{\@seccntformat}[1]{%
+	  \csname the#1\endcsname
+		    .\quad
+}
+
+
+\renewcommand{\maketitle}{\begin{titlepage}
+		\vspace*{1cm}
+    \begin{center}\small
+    	Uniwersytet Wrocławski\\
+    	Wydział Matematyki i Informatyki\\
+    \end{center}
+    \vspace{3cm}
+    \noindent
+    \linia
+    \begin{center}
+    	\LARGE{\textsc{\@title}}
+         \end{center}
+     \linia
+    \begin{center}
+    	\Large{Narzędzia i sposoby realizacji}
+         \end{center}
+    \vspace{0.5cm}
+
+    \begin{flushright}
+
+    \begin{minipage}{5.5cm}
+
+    	\small Autorzy:
+
+    \normalsize {\@author} \par
+    
+
+    \end{minipage}
+    \vspace{5cm}
+
+     
+
+     \end{flushright}
+
+    \vspace*{\stretch{6}}
+
+    \begin{center}
+
+    \@date\\
+
+    \end{center}
+
+  \end{titlepage}%
+
+}
+
+
+\makeatother
+
+\author{Jakub Stępniewicz (\textbf{233217})\\Rafał Maćkowski (\textbf{233170})\\Grupa {\bf I}}
+
+\title{Symulator tramwaju\\ \small{Też możesz być motorniczym}}
+
+
+\begin{document}
+\maketitle
+\tableofcontents
+\vspace{5cm}
+%	\begin{thebibliography}{9}
+%	\bibitem{US} tz, W. Hill {\it Us}, Warszawa 2009.
+%	\bibitem{MPK} \url{http://www.mpk.wroc.pl/}
+%	\bibitem{SK} \url{http://www.skoda.cz/en/products/tramcars/tramcar-19-t/}
+%	\bibitem{UE} \url{http://www.unrealengine.com/}
+%	\bibitem{GO} \url{http://www.google.pl/#sclient=psy-ab&hl=pl&source=hp&q=%22symulator+tramwaju+skoda+16t%22&pbx=1&oq=%22symulator+tramwaju+skoda+16t}
+%	\end{thebibliography}
+\newpage
+% 		Ok, najtrudniejsze za nami.		%
+% 
+\section{Budowa kokpitu tramwaju {\it Škoda 16T}}
+Jednym z głównych atutów symulatora jest wiernie odwzorowany kokpit trawmaju {\it Škoda 16T}. Budowa
+jednak jest przedsięwzięciem bardzo złożonym i wymagającym. Można ją podzielić na kilka etapów.
+\subsection{Stelaż}
+Szkielet kokpitu zostanie wykonany z kątowników aluminiwych, gdyż umożliwiają one łatwe uzyskanie
+sztywności całej konstrukcji, przy nieskomplikownym sposobie montażu. Duża wytrzymałość stelażu
+ułatwi umieszczenie pozostałych elementów. Dodatkowo wykonany z aluminium stelaż będzie miał
+niewielką masę, co ułatwi ewentualne przemieszczanie kokpitu.
+
+\subsection{Laminatowa powłoka}
+Następnie stelaż zostanie pokryty specjalnie do tego celu przygotowaną powłoką z {\it laminatu poliestrowo-szklanego}.
+Elementy będą przygotowane metodą łączenia wielu warstw mat szklanych przy użyciu specjalnego
+epoksydowego spoiwa. Następnie zostaną one przykręcone do stelażu i pokryte {\it żelkotem} w
+odpowiednim kolorze.
+
+\subsection{Przyciski i przełączniki}
+Przy użyciu szlifierki zostaną wycięte z aluminium wszystkie metalowe elementy kokpitu, takie jak
+czuwaki, czy kolumna przepustnicy. Elementy plastikowe takie jak guziki i przełączniki zostaną
+wykonane za pomocą drukarki trójwymiarowej z półprzezroczystego PCV. Zostaną one następnie
+umieszczone w odpowiednich miejscach laminatowego stelażu. 
+
+\subsection{Elektronika i wyświetlacze}
+Ostatnią częśćią budowy kokpitu jest zamontowanie układów odpowiadających za logikę działania
+wszystkich systemów tramwaju. Są to:
+\begin{itemize}
+\item Kontrolery oświetlenia i podświetlenia kokpitu,
+\item układy sterujące zachowaniem się systemów w kokpicie,
+\item sterowniki drzwi, wycieraczek, ogrzewania,
+\item układy odpowiedzialne za kontrolę zasilania,
+\item wielofunkcyjny wyświetlacz aktualnego stanu tramwaju,
+\item przepustnica sterująca silnikami trakcyjnymi oraz hamulcami,
+\item symulator systemu gps oraz radiotelefonu.
+\end{itemize}
+Wszystkie te części będą połączone ze specjalnie do tego celu zaprogramowanym mikrokontrolerem, któy
+będzie się następnie komunikował z właściwym symulatorem w celu aktualizacji stanu tramwaju.
+
+\section{Implementacja symulatora}
+Symulator będzie implementowany w języku {\it C++}, w standardzie {\it GNU99}. Ponieważ sam C++
+nie zawiera narzędzi pozwalających w prosty sposób wykonywać interfejsy graficzne, z programem
+został połączony silnik {\it Unreal Engine 3}.
+
+\subsection{Fizyka i model tramwaju}
+W pełni odwzorowane zostaną następujące elementy tramwaju {\it Škoda 16T}:
+\begin{itemize}
+\item Model ruchu tramwaju typu włączając:
+	\begin{itemize}
+	\item system hamowania elektrodynamiczniego,
+	\item system hamowania konwencjonalnego,
+	\item system odzyskiwania energii hamowania,
+	\item działanie silników trakcyjnych,
+	\item awarie poszczególnych systemów napędowych,
+	\end{itemize}
+\item model zasilania trakcyjnego, w tym:
+	\begin{itemize}
+	\item różne sektory sieci trakcyjnej,
+	\item {\it przerywniki},
+	\item przepięcia i spadki napięcia,
+	\item zachowanie się {\it pantografów} w rożnych warunkach pogodowych,
+	\item system zasilania akumalotorowego,
+	\end{itemize}
+\item działanie systemów logicznych tramwaju:
+	\begin{itemize}
+	\item kontrolowanie drzwi:
+		\begin{itemize}
+		\item zamykanie,
+		\item otwieranie,
+		\item {\it programacja} drzwi,
+		\end{itemize}
+	\item sterowanie oświetleniem wewnętrznym i zewnętrznym,
+	\item system zdalnej kontroli zwrotnic,
+	\item działanie systemu GPS,
+	\item symulacja systemu radiokomunikacji.
+	\end{itemize}
+\end{itemize}
+
+\subsection{Otoczenie i ruch drogowy}
+Jednym z kluczowych elementów szkolenia za pomocą symulatora tramwaju jest nabranie umiejętnośći
+poruszania się w ruchu drogowym o wysokim natężeniu. Będzie to możliwe dzięki zastosowaniu
+specjalnie do tego celu zaprojektowanego systemu sztucznej inteligencji. Umożliwi on kontrolę
+poszczególnych pojazdów w ruchu drogowym, aby jak najbardziej zwiększyć realizm symulacji. Pojazdy
+oprócz zaprogramowanych czynności będą mogły także wykonywać różne zdarzenia losowe.\\System
+sztucznej inteligencji będzie także sterował pozostałymi tramwajami znajdującymi się na torowisku.
+
+\subsection{Odwzorowanie miasta Wrocławia}
+Istnieje możliwość zamówienia rozszerzonej wersji symulatora zawierającej wierne odwzorowanie układu
+drogowego, torowiskowego, trakcyjnego i architektonicznego miasta Wrocławia, łącznie ze wszystkimi 
+czterema zajezdniami tramwajowymi. Umożliwi ona pracę z symulatorem w warunkach jak najmniej 
+odbiegających od rzeczywistego prowadzenia tramwaju {\it Škoda 16T}. Odwzorowanie to jest 
+sprzedawane jako osobny produkt, gdyż wymaga ogromnego nakładu pracy.
+
+\end{document}
+
